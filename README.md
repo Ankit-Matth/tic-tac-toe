@@ -36,4 +36,4 @@ Follow the steps below to install and run the project on your local machine.
   ```bash
   npm start
   ```
-**5. Visit `http://localhost:3000/` to see the magic.**
+**5. Visit `http://localhost:3000/tic-tac-toe` to see the magic.**
