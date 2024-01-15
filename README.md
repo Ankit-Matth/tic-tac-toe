@@ -7,6 +7,9 @@ While exploring the official documentation of React.js, I got an idea to create 
 - **Live link** - https://ankit-matth.github.io/tic-tac-toe/
 
 
+https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/aa12c4ef-6e04-49d8-b4a0-6ff0bcfcf8db
+
+
 ## Technologies Used
 
 1. React.js
