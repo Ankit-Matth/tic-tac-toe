@@ -1,2 +1,5 @@
-# dependencies
+# Ignore node_modules directory
 /node_modules
+
+# Ignore build directory (used for gh pages only)
+/build

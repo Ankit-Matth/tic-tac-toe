@@ -4,7 +4,7 @@ While exploring the official documentation of React.js, I got an idea to create 
 
 ## Quick Demo
 
-- **Live link** - 
+- **Live link** - https://ankit-matth.github.io/tic-tac-toe/
 
 
 ## Technologies Used
@@ -13,7 +13,7 @@ While exploring the official documentation of React.js, I got an idea to create 
 2. Html, CSS, Javascript
 3. JavaScript Syntax Extension
 
-Creating the Tic-Tac-Toe game with React.js, HTML, CSS, and JavaScript (JSX - Javascript Syntax Extension) felt like going on a coding adventure where every line of code taught me something new. Throughout this process, I focused primarily on React.js, deepening my understanding of concepts like Hooks and state management in React. Additionally, I added some animations and sound effects to make this game look cooler and more attractive. Overall, this project wasn't just coding; it was a hands-on learning journey that significantly contributed to my growth as a web developer.
+Creating the Tic-Tac-Toe game using HTML, CSS, JavaScript, React.js, and JSX (JavaScript Syntax Extension)  felt like going on a coding adventure where every line of code taught me something new. Throughout this process, I focused primarily on React.js, deepening my understanding of concepts like Hooks and state management in React. Additionally, I added some animations and sound effects to make this game look cooler and more attractive. Overall, this project wasn't just coding; it was a hands-on learning journey that significantly contributed to my growth as a web developer.
 
 ## Getting Started 
 
@@ -36,4 +36,4 @@ Follow the steps below to install and run the project on your local machine.
   ```bash
   npm start
   ```
-**5. Visit the `http://localhost:3000/` to see the magic.**
+**5. Visit `http://localhost:3000/` to see the magic.**
