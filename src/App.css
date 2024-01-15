@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Noto Serif', serif;
+  font-size: 3rem;
+  width: 18rem;
+  box-sizing: content-box;
+  padding: 0.2rem 0.6rem;
+  margin: 2rem auto;
+  border-radius: 3px;
+}
+
+.main {
+  text-align: center;
+}
+
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 300px) {
+  html {
+      font-size: 80%;
+  }
+}
