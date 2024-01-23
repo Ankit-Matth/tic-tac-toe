@@ -20,7 +20,7 @@ Creating the Tic-Tac-Toe game using HTML, CSS, JavaScript, React.js, and JSX (Ja
 
 ## Getting Started 
 
-**Note:** *Make sure Node.js is installed before proceeding.*
+**Note:** *Make sure Node.js (npm) is installed before proceeding.*
 
 Follow the steps below to install and run the project on your local machine.
 
