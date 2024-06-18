@@ -1,9 +1,9 @@
 import React from 'react'
 import './ScoreBoard.css'
 
-const ScoreBoard = ({xScore,oScore,tieScore,playing}) => {
+const ScoreBoard = ({xScore,oScore,tieScore,playing,topMargin}) => {
   return (
-    <div className='scoreBoard'>
+    <div className='scoreBoard' style={{marginTop: topMargin}}>
       <div className="forX" style={{ color: playing ? 'red' : 'black'}}>
         <div>X</div>
         <div>Score - {xScore}</div>
@@ -20,4 +20,4 @@ const ScoreBoard = ({xScore,oScore,tieScore,playing}) => {
   )
 }
 
-export default ScoreBoard
+export default ScoreBoard;

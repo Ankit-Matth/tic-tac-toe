@@ -4,26 +4,57 @@
   padding: 0;
 }
 
-h1 {
-  font-family: 'Noto Serif', serif;
-  font-size: 3rem;
-  width: 18rem;
-  box-sizing: content-box;
-  padding: 0.2rem 0.6rem;
-  margin: 2rem auto;
-  border-radius: 3px;
-}
-
-.main {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 html {
   font-size: 100%;
 }
 
-@media (max-width: 300px) {
-  html {
-      font-size: 80%;
-  }
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(135deg, #ffcc70, #ff9472);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-container .inner {
+  background-color: #fff;
+  width: 350px;
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.btns {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ff9472;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #ff9472;
+  font-size: 1.7rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+  padding: 0.7rem 1rem;
+  margin: 1rem 0;
+  box-shadow: 2px 2px 7px rgba(128, 128, 128, 0.884);
+}
+
+.btns:hover {
+  background-color: #ff7854; 
+  transform: scale(1.025);
+  cursor: pointer;
 }

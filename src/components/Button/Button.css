@@ -39,3 +39,11 @@
         font-size: 5rem;
     }
 }
+
+.restricted {
+    cursor: progress !important;
+}
+
+.restricted:hover {
+    background-color: whitesmoke;
+}
