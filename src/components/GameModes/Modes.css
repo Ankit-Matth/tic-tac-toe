@@ -2,8 +2,8 @@
 
 h1 {
   font-family: 'Noto Serif', serif;
-  font-size: 3.2rem;
-  width: 18rem;
+  font-size: 3.3rem;
+  width: 19rem;
   box-sizing: content-box;
   padding: 0.2rem 0.6rem;
   border-radius: 3px;
@@ -12,6 +12,7 @@ h1 {
 
 .main {
   text-align: center;
+  margin-top: 1.8rem; 
 }
 
 .bottomBtns {
@@ -62,21 +63,23 @@ h1 {
 .online-container > p {
   color: #666;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .back-to-home {
   background-color: #4285F4;
   color: white;
   border: none;
-  padding: 0.7rem 0;
-  font-size: 1.2rem;
-  width: 11.15rem;
+  width: 190px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 1.3rem;
+  margin-top: 0.9rem;
 }
 
 .back-to-home:hover {
@@ -141,7 +144,7 @@ h1 {
 }
 
 .room-joined {
-  width: 490px;
+  width: 30rem;
   margin: 20px auto;
   padding: 20px 45px;
   border: 15px solid #ccc;
@@ -152,7 +155,7 @@ h1 {
 }
 
 .room-joined h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   color: #333;
 }
@@ -184,8 +187,8 @@ h1 {
 
 .pic img {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   margin-right: 10px;
   margin-top: 10px;
 }
@@ -227,7 +230,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 18rem;
+  width: 19rem;
   padding: 0.7rem 1rem;
   border-radius: 1px;
   box-shadow: 2px 2px 6px rgb(206, 204, 204), -1px -1px 5px rgb(206, 204, 204);
@@ -261,7 +264,7 @@ h1 {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 10px;
-  max-width: 20rem;
+  max-width: 19rem;
   width: 100%;
   animation: popUp 0.3s ease-out;
 }
@@ -328,4 +331,144 @@ h1 {
   cursor: pointer;
   background-color: blue;
   color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .online-container > h2 {
+    font-size: 1.8rem;
+  }
+  
+  .online-container > p {
+    font-size: 0.8rem;
+  }
+
+  .user-info {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .user-info > div {
+    font-size: 1.8rem;
+  }
+
+  .room-joined {
+    width: 22rem;
+    margin: 50px auto;
+    padding: 10px 20px;
+    border: 10px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .room-joined h3 {
+    font-size: 1.5rem;
+  }
+  
+  .room-joined h5 {
+    font-size: 1.125rem;
+  }
+  
+  .participants {
+    border-radius: 4px;
+    padding: 8px;
+  }
+  
+  .pic img {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+  
+  .name {
+    font-size: 1.4rem;
+  }
+  
+  .email {
+    font-size: 10px;
+  }
+  
+  .roomJoinedBtns {
+    font-size: 14px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  .error-message {
+    font-size: 1rem !important;
+  }
+
+  .small-error-message {
+    font-size: 0.6rem !important;
+  }
+
+  .content > h4 {
+    font-size: 1.5rem;
+    margin: 1.2rem;
+  }
+  
+  .cross {
+    padding: 0px 1rem;
+    width: 4.5rem;
+    height: 4rem;
+    margin-right: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .circle {
+    padding: 0;
+    width: 4.5rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .online-container > h2 {
+    font-size: 3rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .online-container > p {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.2rem;
+  }
+
+  .room-joined {
+    width: 20rem;
+    padding: 8px 16px;
+    border: 8px solid #ccc;
+  }
+  
+  .room-joined h3 {
+    font-size: 1.4rem;
+  }
+  
+  .room-joined h5 {
+    font-size: 1rem;
+  }
+  
+  .pic img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 6px;
+    margin-top: 8px;
+  }
+  
+  .name {
+    font-size: 1.3rem;
+  }
+  
+  .email {
+    font-size: 8px;
+  }
+  
+  .roomJoinedBtns {
+    font-size: 12px;
+  }
+
+  .role {
+    font-size: 10px;
+  }
 }

@@ -15,7 +15,7 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 10px;
-  max-width: 20rem;
+  max-width: 19rem;
   width: 100%;
   animation: popUp 0.3s ease-out;
 }

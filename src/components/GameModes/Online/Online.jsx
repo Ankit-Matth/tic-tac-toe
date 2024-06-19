@@ -208,7 +208,7 @@ function Online({ homePage }) {
         <div>Hello <span>{userData.name}</span>,</div>
         <div>Welcome to your profile.</div>
         <p className='note'>Note: To play together, both you and your friend must enter the same room code.</p>
-        <input type="text" value={roomCode} onChange={handleRoomCodeChange} placeholder="Enter a unique Room Code" autoFocus={true} />
+        <input type="text" value={roomCode} onChange={handleRoomCodeChange} placeholder="Enter a room code" autoFocus={true} />
         {roomCodeError && <p className="error-message">{roomCodeError}</p>}
         <button onClick={handleJoinRoom}>Join Room</button>
         <button onClick={handleLogout}>Logout</button>
@@ -221,7 +221,7 @@ function Online({ homePage }) {
       <div className="online-container">
         <h2>Welcome to Online Mode</h2>
         <p>To play online, you must sign in with your Google account.</p>
-        <GoogleLogin onSuccess={(credentialResponse) => { handleLoginData(credentialResponse); }} onError={() => { console.log('Login Failed'); }} />
+        <GoogleLogin width={190} onSuccess={(credentialResponse) => { handleLoginData(credentialResponse); }} onError={() => { console.log('Login Failed'); }}  />
         <button className="back-to-home" onClick={homePage}>
           Back to Home
         </button>
@@ -261,7 +261,7 @@ function Online({ homePage }) {
               <button className='cross' onClick={() => handleChooseIcon('cross')}>X</button>
               <button className='circle' onClick={() => handleChooseIcon('circle')}>O</button>
               </div>
-              {opponentIcon && <p className="error-message" style={{fontSize: '0.8rem'}}>{roomCodeError}</p>}
+              {opponentIcon && <p className="error-message small-error-message" style={{fontSize: '0.7rem !important'}}>{roomCodeError}</p>}
           </div>
         </div>
       </div>

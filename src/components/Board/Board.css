@@ -1,7 +1,7 @@
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: repeat(3, 6rem);
+    grid-template-columns: repeat(3, 6.33rem);
+    grid-template-rows: repeat(3, 6.33rem);
     place-items: center;
     justify-content: center;
 }
