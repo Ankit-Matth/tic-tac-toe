@@ -22,7 +22,7 @@ function Online({ homePage }) {
 
   const createSocket = () => {
     return new Promise((resolve, reject) => {
-      const newSocket = io('https://ankit-matth-tic-tac-toe-server.vercel.app/', {
+      const newSocket = io('http://localhost:5345/', {
         autoConnect: true,
       });
 

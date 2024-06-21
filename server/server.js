@@ -1,7 +1,12 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
-const httpServer = createServer();
+// Create HTTP server and handle requests
+const httpServer = createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Server worked properly....');
+});
+
 const io = new Server(httpServer, {
   cors: "http://localhost:3000/"
 });
@@ -126,5 +131,3 @@ const PORT = process.env.PORT || 5345;
 httpServer.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}/`);
 });
-
-module.exports = httpServer;
