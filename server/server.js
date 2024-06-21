@@ -8,7 +8,9 @@ const httpServer = createServer((req, res) => {
 });
 
 const io = new Server(httpServer, {
-  cors: "http://localhost:3000/"
+  cors: {
+    origin: ["https://ankit-matth.github.io", "http://localhost:3000"]
+  }
 });
 
 const allUsers = {}; 
@@ -131,3 +133,6 @@ const PORT = process.env.PORT || 5345;
 httpServer.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}/`);
 });
+
+// Export the API for vercel
+module.exports = httpServer;
