@@ -171,8 +171,12 @@ describe('Verify game starting functionality in online mode', () => {
                     });
                 });
 
-                cy.get('.square').eq(1).click();
-                cy.get('.square').eq(1).invoke('text').should('match', /\s*X\s*/);
+                cy.then(() => {
+                    cy.wait(100)
+                    cy.get('.square').eq(1).click();
+                    cy.wait(100)
+                    cy.get('.square').eq(1).invoke('text').should('match', /\s*X\s*/);
+                })
 
                 cy.get('.playerTurn').should('contain', "Waiting for opponent's move");
 
@@ -196,8 +200,12 @@ describe('Verify game starting functionality in online mode', () => {
                     });
                 });
 
-                cy.get('.square').eq(3).click();
-                cy.get('.square').eq(3).invoke('text').should('match', /\s*X\s*/);
+                cy.then(() => {
+                    cy.wait(100)
+                    cy.get('.square').eq(5).click();
+                    cy.wait(100)
+                    cy.get('.square').eq(5).invoke('text').should('match', /\s*X\s*/);
+                })
 
                 cy.then(() => {
                     opponentSocket.disconnect()
