@@ -1,10 +1,13 @@
 # Tic Tac Toe
 
-While exploring the official documentation of React.js, I got an idea to create a Tic Tac Toe game since all the necessary details for the game were provided there. Consequently, I decided to apply my React.js knowledge to develop this game. Furthermore, I expanded its functionality to support multiplayer online play using `socket.io`, enabling users to compete with friends remotely, and also incorporated Sign-in with Google using `@react-oauth/google`. To ensure its reliability, I integrated end-to-end testing using Cypress, ensuring its functionality through rigorous testing. Through hands-on implementation, I gained a solid understanding of leveraging React's capabilities for efficient component rendering and dynamic state updates. Additionally, integrating Cypress for end-to-end testing provided me with insights into ensuring comprehensive test coverage and reliable functionality across the entire application.
+While exploring the official documentation of React.js, I got an idea to create a Tic Tac Toe game since all the necessary details for the game were provided there. Consequently, I decided to apply my React.js knowledge to develop this game. Furthermore, I expanded its functionality to support multiplayer online play using **socket.io**, enabling users to compete with friends remotely, and also incorporated `Sign-in with Google` using **@react-oauth/google**. To ensure its reliability, I integrated end-to-end testing using Cypress, ensuring its functionality through rigorous testing. Through hands-on implementation, I gained a solid understanding of leveraging React's capabilities for efficient component rendering and dynamic state updates. Additionally, integrating Cypress for end-to-end testing provided me with insights into ensuring comprehensive test coverage and reliable functionality across the entire application.
 
 ## Quick Demo
 
 - **Live link** - https://ankit-matth.github.io/tic-tac-toe/
+
+https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/6f1c27e7-0874-4cea-a506-577b6ec205e7
+
 
 ## End-to-End Testing with Cypress
 To ensure the reliability and coverage of the application, I implemented end-to-end testing using Cypress. Below are screenshots of the e2e test suites and test cases:
