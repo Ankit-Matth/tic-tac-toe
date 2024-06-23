@@ -146,7 +146,8 @@ function Online({ homePage }) {
     setRoomCode('');
     setJoinedRoomCode('');
     setSocket(null);
-    setOpponentData(null)
+    setOpponentData(null);
+    setRoomCodeError('');
   }
 
   const handleQuitGame = () => {
