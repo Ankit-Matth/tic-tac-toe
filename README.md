@@ -9,6 +9,13 @@ While exploring the official documentation of React.js, I got an idea to create 
 ## End-to-End Testing with Cypress
 To ensure the reliability and coverage of the application, I implemented end-to-end testing using Cypress. Below are screenshots of the e2e test suites and test cases:
 
+![Test Suites of OfflineMode - Part 1](https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/8e478868-95bd-4845-8d99-b940387e3f40)
+![Test Suites of OfflineMode - Part 2](https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/3497d300-375e-416e-ac9e-d33b80222558)
+![OfflineMode cy js Result](https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/75ad8a8b-b77a-4429-ae95-71ebb29d5ee3)
+![All Test Suites of OnlineMode](https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/a9a26410-abd6-478a-91ec-115c83c4415d)
+![OnlineMode cy js Result](https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/e1f45ea7-fb26-40a0-a5bd-1f14975c4775)
+![All Specs Result](https://github.com/Ankit-Matth/tic-tac-toe/assets/146843890/2cf0309e-672c-4bfc-937f-489372e83883)
+
 ## Technologies Used
 
 1. React.js
