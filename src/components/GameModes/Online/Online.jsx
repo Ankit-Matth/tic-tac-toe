@@ -22,12 +22,13 @@ function Online({ homePage }) {
 
   const createSocket = () => {
     return new Promise((resolve, reject) => {
-      const newSocket = io('https://ankit-matth-tic-tac-toe-server.vercel.app/', {
+      const newSocket = io('http://localhost:5345/', {
         autoConnect: true,
       });
 
       newSocket.on('connect', () => {
         setSocket(newSocket);
+        window.socket = newSocket;  // Store the socket on the window object
         resolve(newSocket);
       });
 
@@ -100,6 +101,11 @@ function Online({ homePage }) {
     });
     setIsLoggedIn(true);
   };
+
+  // Expose the handleLoginData function for Cypress testing
+  if (window.Cypress) {
+    window.handleLoginData = handleLoginData;
+  }
 
   const handleLogout = () => {
     setIsLoggedIn(false);

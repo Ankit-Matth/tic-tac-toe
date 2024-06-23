@@ -115,24 +115,24 @@ const simulateDrawGame = () => {
   cy.get('#8').click(); 
 };
 
-describe('ScoreBoard rendered & worked properly', () => {
+describe('ScoreBoard rendered & worked properly in offline mode', () => {
     beforeEach(() => {
         cy.visit('/')
         cy.get('.inner > :nth-child(2)').click();
     });
 
-    it('scoreBoard rendered properly', () => {
+    it('ensure ScoreBoard component is properly rendered', () => {
       // Check if there is a .scoreBoard div
       cy.get('.scoreBoard').should('exist')
     })
 
-    it('renders initial scores correctly', () => {
+    it('initial scores are rendered correctly', () => {
         cy.get('.forX').should('contain', 'Score - 0');
         cy.get('.forO').should('contain', 'Score - 0');
         cy.get('.forDraw').should('contain', 'Ties - 0');
     });
     
-    it('changes score color alternately to indicate active player', () => {
+    it('validate score color changes alternately to indicate active player', () => {
       cy.get('.forX').should('have.css', 'color', 'rgb(255, 0, 0)');
       cy.get('.forO').should('have.css', 'color', 'rgb(0, 0, 0)');
       cy.get('#3').click();
@@ -146,7 +146,7 @@ describe('ScoreBoard rendered & worked properly', () => {
       cy.get('.forO').should('have.css', 'color', 'rgb(0, 0, 255)');
     });
     
-    it('updates scores correctly after X wins', () => {
+    it("score updated correctly after X's win", () => {
       // Call the function to simulate a game where X wins
       simulateXWinGame();
     
@@ -156,7 +156,7 @@ describe('ScoreBoard rendered & worked properly', () => {
       cy.get('.forDraw').should('contain', 'Ties - 0');
     });
     
-    it('updates scores correctly after O wins', () => {
+    it("score updated correctly after O's win", () => {
       // Call the function to simulate a game where O wins
       simulateOWinGame();
     
@@ -166,7 +166,7 @@ describe('ScoreBoard rendered & worked properly', () => {
       cy.get('.forDraw').should('contain', 'Ties - 0');
     });
     
-    it('updates scores correctly after a draw game', () => {
+    it('score updated correctly after a draw game', () => {
       // Call the function to simulate a draw game
       simulateDrawGame();
     
@@ -176,7 +176,7 @@ describe('ScoreBoard rendered & worked properly', () => {
       cy.get('.forDraw').should('contain', 'Ties - 1');
     });
     
-    it("verify scores persist after 'Play Again' click (should not reset to 0)", () => {
+    it("ensure scores persist after 'Play Again' click (should not reset to 0)", () => {
       simulateXWinGame();
       cy.get('.modalBtn').click()
       // Ensure the score should not reset to 0
@@ -196,13 +196,13 @@ describe('ScoreBoard rendered & worked properly', () => {
     });
 })
   
-describe('Verify Popup Appearance and Functionality', () => {
+describe('Verify popup appearance and functionality in offline mode', () => {
     beforeEach(() => {
       cy.visit('/')
       cy.get('.inner > :nth-child(2)').click()
     });
   
-    it('Should display popup with winner message after X wins', () => {
+    it("should display popup with winner message for X's win", () => {
       simulateXWinGame()
   
       cy.get('.modal').should('be.visible');
@@ -211,7 +211,7 @@ describe('Verify Popup Appearance and Functionality', () => {
       cy.get('.modal button.modalBtn').should('contain', 'Play again');
     });
   
-    it('Should display popup with winner message after O wins', () => {
+    it("should display popup with winner message for O's win", () => {
       simulateOWinGame()
   
       cy.get('.modal').should('be.visible');
@@ -220,7 +220,7 @@ describe('Verify Popup Appearance and Functionality', () => {
       cy.get('.modal button.modalBtn').should('contain', 'Play again');
     });
   
-    it('Should display popup on game over with draw message', () => {
+    it('should display popup on game over with a draw message', () => {
       simulateDrawGame()
   
       cy.get('.modal').should('be.visible');
@@ -230,7 +230,7 @@ describe('Verify Popup Appearance and Functionality', () => {
       cy.get('.modal button.modalBtn').should('contain', 'Play again');
     });
   
-    it('Popup should close and Players Can Replay Upon Clicking "Play Again" Button', () => {
+    it('popup should closed and players can replay upon clicking "Play Again" button', () => {
       simulateOWinGame()
       cy.get('.modal button.modalBtn').contains('Play again').click();
   
@@ -241,7 +241,7 @@ describe('Verify Popup Appearance and Functionality', () => {
       simulateXWinGame()
     });
   
-    it('Should not close popup when clicking outside the modal', () => {
+    it('should not close the popup when clicking outside the modal', () => {
       simulateDrawGame()
   
       // Click outside the modal
@@ -253,7 +253,7 @@ describe('Verify Popup Appearance and Functionality', () => {
     });
 })
 
-describe('verify Home button and Sound button functionality', () => {
+describe('Verify home and sound button functionality in offline mode', () => {
     beforeEach(() => {
       cy.visit('/')
       cy.get('.inner > :nth-child(2)').click()
@@ -269,7 +269,7 @@ describe('verify Home button and Sound button functionality', () => {
       cy.get('.inner > :nth-child(1)').should('contain', 'Play Online');
     })
 
-    it('should toggle the sound button icon between high volume and mute', () => {
+    it('should toggle the sound button icon between high-volume and mute', () => {
       // Ensure the sound button exists
       cy.get('#soundBtn').should('exist');
 
