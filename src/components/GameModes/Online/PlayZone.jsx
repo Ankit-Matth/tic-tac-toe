@@ -9,10 +9,11 @@ import {
   Board, 
   ScoreBoard, 
   Modal, 
-  useCommonStates
+  useCommonStates  // Custom hook for managing common states
 } from '../Common/common';
 
 function PlayZone({handleQuitGame, userData, opponentData, choosePlayerIcon, socket, opponentIcon}) {
+  // Destructuring states and functions from useCommonStates hook
   const {
     board,
     setBoard,
@@ -34,13 +35,16 @@ function PlayZone({handleQuitGame, userData, opponentData, choosePlayerIcon, soc
     commonBtnClick
   } = useCommonStates();
 
+  // State to restrict player actions
   const [isRestricted, setIsRestricted] = useState(false);
 
+  // Effect to set restriction based on player's icon and turn
   useEffect(() => {
     const isCross = choosePlayerIcon === "cross";
     setIsRestricted(isXPlaying ? !isCross : isCross);
   }, [board,choosePlayerIcon,isXPlaying]);
 
+  // Effect to handle incoming player moves from the server
   useEffect(() => {
     const handlePlayerMoveFromServer = (data) => {
       handlePlayerMoveSound();
@@ -56,6 +60,7 @@ function PlayZone({handleQuitGame, userData, opponentData, choosePlayerIcon, soc
     };
   },);
 
+  // Function to handle button clicks for making a move
   const handleBtnClick = (clickedBtnId) => {
     const updatedBoard = commonBtnClick(clickedBtnId);
     socket.emit('playerMoveFromClient', {
@@ -64,11 +69,13 @@ function PlayZone({handleQuitGame, userData, opponentData, choosePlayerIcon, soc
     });
   }
 
+  // Function to handle the play again action
   const onPlayAgain = () => {
     commonOnPlayAgain();
     socket?.emit('playAgainFromClient');
   };
 
+  // Effect to handle play again requests from the server
   useEffect(() => {
     const handlePlayAgainFromServer = () => {
       commonOnPlayAgain();

@@ -27,6 +27,7 @@ const useCommonStates = () => {
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
 
+    // Winning conditions for the game
     const WIN_CONDITIONS = [
         [0, 1, 2],
         [3, 4, 5],
@@ -39,9 +40,10 @@ const useCommonStates = () => {
       ];
 
     const nothing = () => {
-      // nothing (just used to remove some runtime errors...)
+      // Function to do nothing (used to remove some runtime errors)
     }
     
+    // Function to toggle sound on and off
     const toggleSound = () => {
       setIsSoundOn(!isSoundOn);
     };
@@ -55,7 +57,8 @@ const useCommonStates = () => {
           }
         }
     }
-
+    
+    // Function to reset the game after a win or tie
     const reset = (currentWinner) => {
         setModalMessage(currentWinner);
         setIsXPlaying(isXPlaying);
@@ -64,6 +67,7 @@ const useCommonStates = () => {
         }, 1200);
     };
 
+    // Function to handle the Play Again button click
     const commonOnPlayAgain = () => {
         stopTie();
         stopWin();
@@ -77,6 +81,7 @@ const useCommonStates = () => {
         }, 500);
     }
 
+    // Function to handle the result of the game (win/tie)
     const handleGameResult = (updatedBoard) => {
         const winner = checkWinner(updatedBoard);
       
@@ -129,11 +134,13 @@ const useCommonStates = () => {
         }
     };
 
+    // Function to handle the sound when a player makes a move
     const handlePlayerMoveSound = () => {
         stopNewGame()
         if (isSoundOn) playBtnPopUp();
     } 
 
+    // Function to handle the button click for a player's move
     const commonBtnClick = (clickedBtnId) => {
         const updatedBoard = board.map((value,id) => {
             if (id === clickedBtnId) {

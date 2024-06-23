@@ -20,6 +20,7 @@ function Online({ homePage }) {
   const [opponentData, setOpponentData] = useState(null);
   const [opponentLeftError, setOpponentLeftError] = useState('');
 
+  // Function to create a new socket connection
   const createSocket = () => {
     return new Promise((resolve, reject) => {
       const newSocket = io('http://localhost:5345/', {
@@ -28,7 +29,7 @@ function Online({ homePage }) {
 
       newSocket.on('connect', () => {
         setSocket(newSocket);
-        window.socket = newSocket;  // Store the socket on the window object
+        window.socket = newSocket;  // Store the socket on the window object for global access
         resolve(newSocket);
       });
 
@@ -38,6 +39,7 @@ function Online({ homePage }) {
     });
   };
 
+  // Emit request to start the game when player icon is chosen
   useEffect(() => {
     if (choosePlayerIcon) {
       socket.emit('request_to_start', {
@@ -46,6 +48,7 @@ function Online({ homePage }) {
     }
   }, [choosePlayerIcon,socket]);
 
+  // Initialize the socket connection when the user joins a room
   useEffect(() => {
     const initializeSocket = async () => {
       try {
@@ -92,6 +95,7 @@ function Online({ homePage }) {
     setOpponentIcon(data.choosedIcon)
   });
   
+  // Handle login data from Google OAuth
   const handleLoginData = (credentialResponse) => {
     const decoded = jwtDecode(credentialResponse.credential);
     setUserData({
@@ -118,6 +122,7 @@ function Online({ homePage }) {
     setSocket(null);
   };
 
+  // Handle changes to the room code input field
   const handleRoomCodeChange = (event) => {
     setRoomCode(event.target.value);
   };
@@ -166,6 +171,7 @@ function Online({ homePage }) {
     }
   }
 
+   // Render the UI for when the user has joined a room
   const renderRoomJoined = () => {
     return (
       <div className="room-joined">
@@ -208,6 +214,7 @@ function Online({ homePage }) {
     );
   };
 
+  // Render the UI when the user is logged in but has not joined a room
   const renderLoggedInContent = () => {
     return (
       <div className="user-info">
@@ -222,6 +229,7 @@ function Online({ homePage }) {
     );
   };
 
+  // Render the UI for when the user is not logged in
   const renderLoginButton = () => {
     return (
       <div className="online-container">
@@ -257,6 +265,7 @@ function Online({ homePage }) {
     }
   }
 
+   // Render the UI for choosing a player icon
   const renderChooseIcon = () => {
     return (
       <div className="overlay">
@@ -274,6 +283,7 @@ function Online({ homePage }) {
     );
   };
 
+  // Render the main UI based on the current state
   return (
     <>
       {gameStarted ? (

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
+/* CSS styling for the main logic of the game */
+
 h1 {
   font-family: 'Noto Serif', serif;
   font-size: 3.3rem;
@@ -41,6 +43,29 @@ h1 {
   cursor: pointer;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
+
+.participantInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 19rem;
+  padding: 0.7rem 1rem;
+  border-radius: 1px;
+  box-shadow: 2px 2px 6px rgb(206, 204, 204), -1px -1px 5px rgb(206, 204, 204);
+  margin: 1rem auto;
+}
+
+.participantInfo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.playerTurn {
+  margin: 0.8rem auto;
+}
+
+/* CSS styling for the Login page in Online Mode */
 
 .online-container {
   display: flex;
@@ -86,6 +111,8 @@ h1 {
   background-color: #357ae8;
   cursor: pointer;
 }
+
+/* CSS styling for when the user is logged in but has not joined a room */
 
 .user-info {
   display: flex;
@@ -142,6 +169,8 @@ h1 {
 .user-info > button:hover {
   background-color: #45a049;
 }
+
+/* CSS styling for when the user has joined a room */
 
 .room-joined {
   width: 30rem;
@@ -226,26 +255,7 @@ h1 {
   background-color: #0056b3;
 }
 
-.participantInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 19rem;
-  padding: 0.7rem 1rem;
-  border-radius: 1px;
-  box-shadow: 2px 2px 6px rgb(206, 204, 204), -1px -1px 5px rgb(206, 204, 204);
-  margin: 1rem auto;
-}
-
-.participantInfo img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.playerTurn {
-  margin: 0.8rem auto;
-}
+/* CSS styling for choosing a player icon */
 
 .overlay {
   position: fixed;
@@ -332,6 +342,8 @@ h1 {
   background-color: blue;
   color: white;
 }
+
+/* CSS for Responsiveness */
 
 @media screen and (max-width: 480px) {
   .online-container > h2 {

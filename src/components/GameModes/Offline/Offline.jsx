@@ -7,10 +7,11 @@ import {
   Board, 
   ScoreBoard, 
   Modal, 
-  useCommonStates
+  useCommonStates // Custom hook for managing common states
 } from '../Common/common';
 
 function Offline({homePage}) {
+  // Destructuring states and functions from useCommonStates hook
   const {
     board,
     isXPlaying,
@@ -27,12 +28,14 @@ function Offline({homePage}) {
     commonOnPlayAgain,
     commonBtnClick
   } = useCommonStates();
-  
+
+  // Function to handle button clicks
   const handleBtnClick = (clickedBtnId) => {
     // Call commonBtnClick and ignore its return value
     commonBtnClick(clickedBtnId)
   }
 
+  // Function to handle 'play again' button click
   const onPlayAgain = () => {
     commonOnPlayAgain();
   };
