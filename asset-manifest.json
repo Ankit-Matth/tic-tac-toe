@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tic-tac-toe/static/css/main.ba7e7068.css",
-    "main.js": "/tic-tac-toe/static/js/main.90ce93b7.js",
+    "main.js": "/tic-tac-toe/static/js/main.b7e78ba9.js",
     "static/js/885.6457651d.chunk.js": "/tic-tac-toe/static/js/885.6457651d.chunk.js",
     "static/media/newGame.wav": "/tic-tac-toe/static/media/newGame.ab583e220d9d8c0b969c.wav",
     "static/media/versus.png": "/tic-tac-toe/static/media/versus.baa0bb37a245778f753a.png",
@@ -10,11 +10,11 @@
     "static/media/btnPopUp.mp3": "/tic-tac-toe/static/media/btnPopUp.27c066957dbe687b7e7d.mp3",
     "index.html": "/tic-tac-toe/index.html",
     "main.ba7e7068.css.map": "/tic-tac-toe/static/css/main.ba7e7068.css.map",
-    "main.90ce93b7.js.map": "/tic-tac-toe/static/js/main.90ce93b7.js.map",
+    "main.b7e78ba9.js.map": "/tic-tac-toe/static/js/main.b7e78ba9.js.map",
     "885.6457651d.chunk.js.map": "/tic-tac-toe/static/js/885.6457651d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba7e7068.css",
-    "static/js/main.90ce93b7.js"
+    "static/js/main.b7e78ba9.js"
   ]
 }
