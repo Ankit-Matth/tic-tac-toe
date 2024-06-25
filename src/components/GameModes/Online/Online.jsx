@@ -23,7 +23,7 @@ function Online({ homePage }) {
   // Function to create a new socket connection
   const createSocket = () => {
     return new Promise((resolve, reject) => {
-      const newSocket = io('http://localhost:5345/', {
+      const newSocket = io('http://43.205.103.103:5345/', {
         autoConnect: true,
       });
 

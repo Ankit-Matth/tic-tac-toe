@@ -19,7 +19,7 @@ import io from 'socket.io-client';
 Cypress.Commands.add('createOpponentConnection', (roomCode) => {
     cy.wrap(
         new Promise((resolve) => {
-            const opponentSocket = io('http://localhost:5345/');
+            const opponentSocket = io('http://43.205.103.103:5345/');
             opponentSocket.on('connect', () => {
                 const opponentData = {
                     name: 'Amit Matth',
