@@ -23,7 +23,7 @@ function Online({ homePage }) {
   // Function to create a new socket connection
   const createSocket = () => {
     return new Promise((resolve, reject) => {
-      const newSocket = io('https://tic-tac-toe-server.linkpc.net/', {
+      const newSocket = io('https://tic-tac-toe-7yf4.onrender.com', {
         autoConnect: true,
       });
 
